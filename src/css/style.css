@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap');
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+main::after {
+    content: "";
+    width: 80vw;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+    z-index: -1;
+}
+
+main .characters .character {
+    height: 100%;
+    display: none;
+}
+
+main .characters .character.active {
+    display: flex;
+}
+
+main .character .character-image-bg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+main .character .infos {
+    align-self: center;
+    margin-left: 120px;
+    color: #FFF;
+    width: 380px;
+}
+
+main .character .infos .logo {
+    width: 280px;
+    margin-bottom: 35px;
+}
+
+main .character .infos .character-name {
+    font-family: "Secular One", sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+main .character .infos .character-description {
+    font-family: "Rubik", sans-serif;
+    line-height: 24px;
+}
+
+main .lateral-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    background-color: rgba(20, 20, 20, 0.4);
+}
+
+main .lateral-bar .characters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .lateral-bar .characters-list li .icon {
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main .lateral-bar .characters-list li .icon.selected {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+    border-radius: 50%;
+    cursor: default;
+}
