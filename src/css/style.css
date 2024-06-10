@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap');
 
 main {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 main::after {
