@@ -3,6 +3,10 @@ const charactersCards = document.querySelectorAll(".character")
 
 charactersIcons.forEach((characterIcon, index) => {
     characterIcon.addEventListener("click", () => {
+        if(window.innerWidth < 450) {
+            window.scrollTo ({top: 0, behavior: 'smooth'});
+        }
+
         updateCharacterIcon(characterIcon)
 
         updateCharacterActiveCard(index)
